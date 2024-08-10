@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=., initial-scale=1.0" />
+    <title>Ucapan Ulang Tahun</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #ff6e6e;
+        font-family: italic,Sans-Serif;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 40vh;
+      }
+      .envelope {
+        position: relative;
+        background-color: #f7f7f7;
+        height: 10rem;
+        width: 20rem;
+        border: 2px solid black;
+        border-radius: 7px;
+      }
+      .segitiga-bawah {
+        width: 19.5rem;
+        margin-left: 2px;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 100px solid #dbd8d8; /* Warna segitiga */
+      }
+      .garis-miring-segitiga::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 7rem;
+        background-color: black;
+        transform-origin: left;
+        transition: all 0.5s;
+        transform: rotate(63deg);
+        top: 0;
+        left: 1px;
+      }
+      .garis-miring-segitiga::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 7rem;
+        background-color: black;
+        transform-origin: right;
+        transition: all 0.5s;
+        transform: rotate(-63deg);
+        right: 1px;
+        top: 0;
+      }
+      .segitiga-bawah.reveal {
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 100px solid #787878;
+      }
+      .garis-tengah::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 13.4rem;
+        background-color: black;
+        right: 16%;
+        bottom: 34.5%;
+        transition: all 0.5s;
+      }
+      .garis-tengah-atas::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 13.4rem;
+        background-color: black;
+        right: 16%;
+        top: -65%;
+        transition: all 0.5s;
+        display: none;
+      }
+      .reveal::after {
+        display: block;
+      }
+      .segitiga-atas {
+        position: absolute;
+        top: -65%;
+        width: 19.5rem;
+        height: 0;
+        margin-left: 2px;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid #dbd8d8;
+        display: none;
+      }
+      .segitiga-atas::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 7rem;
+        background-color: black;
+        transform-origin: left;
+        transition: all 0.5s;
+        transform: rotate(63deg);
+        right: -53%;
+        bottom: -2px;
+      }
+      .segitiga-atas::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 7rem;
+        background-color: black;
+        transform-origin: right;
+        transition: all 0.5s;
+        transform: rotate(-63deg);
+        left: -53%;
+        bottom: -2px;
+      }
+      .segitiga-atas.reveal {
+        display: block;
+      }
+
+      .garis-miring::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 4.6rem;
+        background-color: black;
+        transform-origin: right;
+        transition: all 0.5s;
+      }
+      .garis-miring::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 4.6rem;
+        background-color: black;
+        transform-origin: left;
+        transition: all 0.5s;
+      }
+      .garis-miring::after {
+        right: 0;
+        transform: rotate(46deg);
+        bottom: 0;
+      }
+      .garis-miring::before {
+        transform: rotate(-46deg);
+        bottom: 0;
+      }
+      .surat {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -54%);
+        height: 3rem;
+        width: 13rem;
+        background-color: white;
+        display: none;
+        transition: all 0.5s ease-in;
+      }
+      .surat p {
+        text-align: center;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      .surat:hover {
+        height: 8rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+      }
+      .surat.reveal {
+        display: block;
+      }
+
+      .button {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+      #click {
+        padding: 1rem;
+        width: 10rem;
+        border-radius: 15px;
+        background-color: purple;
+        font-size: 1rem;
+        font-weight: bold;
+        display: block;
+      }
+      #click.reveal {
+        display: none;
+      }
+      .surat-ucapan {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 16rem;
+        width: 25rem;
+        background-color: white;
+        display: none;
+      }
+      .surat-ucapan.reveal {
+        display: block;
+        animation: animasi 0.9s ease-in-out;
+      }
+      .surat-ucapan h3 {
+        text-align: center;
+        margin: 0.8rem;
+      }
+      .surat-ucapan p {
+        margin: 0.5rem;
+        font-size: 1rem;
+        text-align: center;
+      }
+      .surat-ucapan h4 {
+        position: absolute;
+        bottom: 2em;
+        right: 2em;
+      }
+      .surat-ucapan h6 {
+        position: absolute;
+        bottom: 3.5rem;
+        right: 3rem;
+      }
+      .toggle {
+        position: absolute;
+        display: block;
+        left: 1rem;
+        margin-top: -0.8rem;
+        cursor: pointer;
+        height: 1rem;
+        width: 2rem;
+        bottom: 1rem;
+      }
+      .toggle::after,
+      .toggle::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 1.5rem;
+        background-color: black;
+        transform-origin: left;
+        transition: all 0.5s;
+      }
+      .toggle::before {
+        top: 100%;
+        transform: rotate(-45deg);
+      }
+      .toggle::after {
+        transform: rotate(45deg);
+      }
+      @keyframes animasi {
+        from {
+          top: -30%;
+        }
+        to {
+          top: 0;
+        }
+        
+      }
+      .exit-toggle {
+        position: absolute;
+        display: block;
+        margin-top: -0.8rem;
+        cursor: pointer;
+        height: 1rem;
+        width: 2rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-30%, 880%);
+        display: none;
+      }
+      .exit-toggle::after,
+      .exit-toggle::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 1.5rem;
+        background-color: black;
+        transform-origin: left;
+        transition: all 0.5s;
+      }
+      .exit-toggle::before {
+        top: 100%;
+        transform: rotate(-45deg);
+      }
+      .exit-toggle::after {
+        transform: rotate(45deg);
+      }
+      .exit-toggle.reveal {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="envelope">
+          <div class="satas">
+            <div class="segitiga-atas"></div>
+            <div class="segitiga-bawah"></div>
+          </div>
+          <div class="garis-tengah-atas" id="garis-atas"></div>
+          <div class="garis-miring-segitiga"></div>
+          <div class="surat" id="surat"><p>click</p></div>
+          <div class="garis-tengah"></div>
+          <div class="garis-miring"></div>
+        </div>
+      </div>
+      <div class="surat-ucapan">
+        <h3>Selamat Ulang Tahun</h3>
+        <p>
+          Barakallah fii umrik! Semoga Allah SWT selalu memberikan rahmat di
+          sepanjang fase kehidupan kamu ke depannya, termasuk kesehatan dan umur
+          yang panjang.
+        </p>
+        <p>باراك الله في عمريك</p>
+        <h6>from :</h6>
+        <h4>m faqih s</h4>
+        <div class="toggle"></div>
+      </div>
+      <div class="exit-toggle"></div>
+      <div class="button">
+        <button id="click">click Me</button>
+      </div>
+    </main>
+    <script>
+      const Reveal = document.getElementById("click");
+
+      Reveal.addEventListener("click", () => {
+        document.querySelector(".segitiga-atas").classList.add("reveal");
+        document.querySelector(".segitiga-bawah").classList.add("reveal");
+        var element = document.getElementById("garis-atas");
+        element.classList.add("reveal");
+        document.querySelector(".surat").classList.add("reveal");
+        document.getElementById("click").classList.add("reveal");
+        document.querySelector(".exit-toggle").classList.add("reveal");
+      });
+
+      const surat = document
+        .getElementById("surat")
+        .addEventListener("click", () => {
+          document.querySelector(".surat-ucapan").classList.add("reveal");
+          document.querySelector(".exit-toggle").classList.remove("reveal");
+        });
+
+      const toggle = document
+        .querySelector(".toggle")
+        .addEventListener("click", () => {
+          document.querySelector(".surat-ucapan").classList.remove("reveal");
+          document.querySelector(".segitiga-atas").classList.remove("reveal");
+          document.querySelector(".segitiga-bawah").classList.remove("reveal");
+          var element = document.getElementById("garis-atas");
+          element.classList.remove("reveal");
+          document.querySelector(".surat").classList.remove("reveal");
+          document.getElementById("click").classList.remove("reveal");
+        });
+
+      const exit = document
+        .querySelector(".exit-toggle")
+        .addEventListener("click", () => {
+          document.querySelector(".segitiga-atas").classList.remove("reveal");
+          document.querySelector(".segitiga-bawah").classList.remove("reveal");
+          var element = document.getElementById("garis-atas");
+          element.classList.remove("reveal");
+          document.querySelector(".surat").classList.remove("reveal");
+          document.getElementById("click").classList.remove("reveal");
+          document.querySelector(".exit-toggle").classList.remove("reveal");
+        });
+        
+    </script>
+  </body>
+</html>
