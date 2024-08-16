@@ -34,6 +34,7 @@ img {
    background: linear-gradient(#006400, #008c04 ); /* Gradasi dark green ke emas */
    position:absolute;
    width: 100%;
+   z-index:1000;
    /* animation: slideDown 1s forwards; */
 }
 
