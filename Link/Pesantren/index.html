@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Pesantren</title>
+    <link rel="icon" href="/Img/Bsilogo.png" type="icon" />
+   <link rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <nav>
+      <button  onclick="goBack()">Kembali</button>
+   </nav>
+   <main>
+      <div class="form-container">
+        <h1>Pendaftaran Pesantren<br>Baitus Shofaa Al-Islami</h1>
+        <form id="registrationForm" action="https://formspree.io/f/xanwqyjz"
+        method="POST">
+            <label for="Nama Lengkap">Nama Lengkap:</label>
+            <input type="text" id="name" name="Nama Lengkap" required>
+            
+            <label for="Tempat lahir">Tempat Lahir:</label>
+            <input type="text" id="Tempat Lahir" name="Tempat Lahir" required>
+            
+            <label for="Tanggal Lahir">Tanggal Lahir:</label>
+            <input type="date" id="Tanggal lahir" name="Tanggal Lahir" placeholder="DD/MM/YYYY"
+            pattern="\d{2}/\d{2}/\d{4}" required>
+            
+            <label for="Jenis Kelamin">Jenis Kelamin:</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="Laki-laki" required>
+                <label for="male">Laki-laki</label>
+                <input type="radio" id="female" name="gender" value="Perempuan" required>
+                <label for="female">Perempuan</label>
+            </div>
+            
+            <label for="Alamat">Alamat Tempat Tinggal:</label>
+            <input type="text" id="address" name="Alamat" required>
+            
+            <label for="No Tlp/WA">No Tlp / WA:</label>
+            <input type="tel" id="phone" name="No hp/WA" required>
+            
+            <button>Kirim</button>
+            
+        </form>
+      </div>
+   </main>
+      <div class="transparan"></div>
+<!--footer-->
+    <footer class="footer">
+        <div class="contact-info">
+            <div class="address">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Kp margahurip rt01 01, Ciheulang, Kec. Ciparay, Kabupaten Bandung, Jawa
+                Barat, Indonesia</span>
+            </div>
+            <div class="email">
+                <i class="fas fa-envelope"></i>
+                <span>mahadbaitusshofaaalislami@gmail.com</span>
+            </div>
+            <div class="phone">
+                <i class="fas fa-phone"></i>
+                <span>(123) 456-7890</span>
+            </div>
+        </div>
+        <div class="separator1"></div>
+        <div class="sosials shover">
+            <div class="instagram shover">
+               <a href="https://www.instagram.com/ponpesbaitusshofaa?igsh=MTF6cXJ0NXRvbHAwOQ=="><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="youtube shover">
+               <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="facebook shover">
+               <a href="#"><i class="fab fa-facebook" style="font-size:15px;"></i></a>
+            </div>
+        </div>
+        <div class="separator2"></div>
+        <div class="link-nav">
+           <ul>
+            <a onclick="goBack()">
+               <li>Beranda</li>
+            </a>
+            <a href="/Link/Kontak/index.html">
+             <li>Kontak</li>
+          </a>
+            <a href="/Link/Bantuan/index.html">
+               <li>Bantuan</li>
+            </a>
+           </ul>
+        </div>
+        <div class="separator3"></div>
+        <div class="footer-bottom">
+           <p> &copy 2024 Baitus Shofaa. All rights reserved. </p>
+        </div>
+    </footer>
+
+    <script src="Script.js"></script>
+</body>
+</html>
