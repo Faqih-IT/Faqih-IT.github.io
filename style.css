@@ -866,7 +866,7 @@ padding: 2px 3px;
 background: #008c04;
 text-decoration: none;
 }
-@media screen (max-width: 900px) {
+@media screen (max-width: 1080px) {
   .social-icons li.title {
     display: block;
     margin-right: 0;
