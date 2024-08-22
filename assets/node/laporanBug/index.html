@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Bug</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="icon" href="./../../img/BSI.png" type="icons">
+</head>
+<body>
+    <div class="container-nav">
+        <button onclick="goBack()">Kembali</button>
+    </div>
+    <div class="container contact-form">
+        <div class="contact-image">
+            <img src="./../../img/bug2.png" alt="Bug Icon">
+        </div>
+        <form method="post">
+            <h3>Kirimkan Masalah Bug</h3>
+            <p>#Lapor Jika Menemukan error atau Bug di dalam website</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="txtName" class="form-control" placeholder="Nama Lengkap *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="txtEmail" class="form-control" placeholder="Nama Email *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="txtPhone" class="form-control" placeholder="No Tlp/WA *" value="" />
+                    </div>
+                    <div class="form-group mobile">
+                        <textarea name="txtMsg" class="form-control" placeholder="Laporan Bug*" style="width: 100%; height: 150px;"></textarea>
+                    </div>
+                    <div class="form-group dekstop">
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Kirim Pesan" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group dekstop">
+                        <textarea name="txtMsg" class="form-control" placeholder="Laporan Bug*" style="width: 100%; height: 150px;"></textarea>
+                    </div>
+                    <div class="form-group mobile">
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Kirim Pesan" />
+                    </div>
+                </div>
+            </div>
+        </form>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>

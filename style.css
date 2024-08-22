@@ -212,7 +212,7 @@ body {
 .container-button button {
   --border: 5px; /* the border width */
   --slant: 0.7em; /* control the slanted corners */
-  --color: #00ff11; /* the color */
+  --color: #00990a; /* the color */
 
   font-size: 35px;
   padding: 0.4em 1.2em;
