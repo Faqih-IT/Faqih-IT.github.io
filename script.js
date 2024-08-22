@@ -1,7 +1,15 @@
 // The script for the icon font from https://akaricons.com/ is in this pen's JS settings
 
-function goUrl() {
-    window.location.href = './assets/404/index.html';
+function goUrlF() {
+    window.location.href = './assets/menu/fasilitas/index.html';
+}
+
+function goUrlP() {
+    window.location.href = './assets/menu/pendaftaran/index.html'
+}
+
+function goUrlV() {
+    window.location.href = './assets/menu/visimisi/index.html'
 }
 
 let mybutton = document.getElementById("btn-back-to-top");
@@ -57,3 +65,4 @@ window.addEventListener('load', function(e) {
 		}, 3500);
 	}, 5500);
 });
+

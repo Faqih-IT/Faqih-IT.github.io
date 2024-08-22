@@ -31,33 +31,27 @@
                 </a>
             </li>	
             <li class="li-nav">
-                <a href="./assets/404/index.html" class="a-nav">
-                    <i class='bx bxs-graduation'></i>
+                <a href="./assets/menu/pendaftaran/index.html" class="a-nav">
+                    <i class="bi bi-mortarboard"></i>
                     <span>Pendaftaran</span>
                 </a>
             </li>
             <li class="li-nav">
                 <a href="./assets/404/index.html" class="a-nav">
-                    <i class="ai-book-open"></i>
-                    <span>E-Books</span>
-                </a>
-            </li>
-            <li class="li-nav">
-                <a href="./assets/404/index.html" class="a-nav">
-                    <i class="ai-crown"></i>
+                    <i class="bi bi-trophy"></i>
                     <span>Prestasi</span>
                 </a>
             </li>	
-            <li class="li-nav">
-                <a href="./assets/404/index.html" class="a-nav">
-                    <i class="ai-bell"></i>
-                    <span>Notifications</span>
-                </a>
-            </li>
             <li class="li-nav">	
                 <a href="./assets/404/index.html" class="a-nav">
                     <i class='bx bx-message'></i>
                     <span>Kontak</span>
+                </a>
+            </li>
+            <li class="li-nav">
+                <a href="./assets/404/index.html" class="a-nav">
+                    <i class="ai-bell"></i>
+                    <span>Notifications</span>
                 </a>
             </li>
             <li class="li-nav">
@@ -83,16 +77,13 @@
                         <a href="#">Album Galeri</a>
                     </li>
                     <li>
-                        <a href="#">Pendaftaran</a>
-                    </li>
-                    <li>
-                        <a href="#">E-Book</a>
+                        <a href="./assets/menu/pendaftaran/index.html">Pendaftaran</a>
                     </li>
                     <li>
                         <a href="#">Prestasi</a>
                     </li>
                     <li>
-                        <a href="">Notifikasi</a>
+                        <a href="" id="notifyButton">Notifikasi</a>
                     </li>
                     <li>
                         <a href="">Kontak</a>
@@ -119,9 +110,9 @@
             <i class="fas fa-arrow-up"></i>
         </button>
         <div class="container-button">
-            <button style="--color:#1900ff;--slant:40px;--border:8px" onclick="goUrl()">Pendaftaran</button>
-            <button onclick="goUrl()">Visi & Misi</button>
-            <button style="--color:#ff0000;--border:2px;--slant:.5em" onclick="goUrl()">Fasilitas</button>
+            <button style="--color:#1900ff;--slant:40px;--border:8px" onclick="goUrlP()">Pendaftaran</button>
+            <button onclick="goUrlV()">Visi & Misi</button>
+            <button style="--color:#ff0000;--border:2px;--slant:.5em" onclick="goUrlF()">Fasilitas</button>
         </div>
         <div class="container-quick-btn">
             <div class="fab-wrapper">
@@ -132,13 +123,13 @@
                     <span class="fab-dots fab-dots-3"></span>
                 </label>
                 <div class="fab-wheel">
-                    <a class="fab-action fab-action-1" href="./assets/404/index.html">
+                    <a class="fab-action fab-action-1" href="./assets/menu/bantuan/index.html">
                         <i class="ai-question"></i>
                     </a>
-                    <a class="fab-action fab-action-2" href="./assets/404/index.html">
+                    <a class="fab-action fab-action-2" href="https://linktr.ee/Baitusshofaa">
                         <i class="ai-link-chain"></i>
                     </a>
-                    <a class="fab-action fab-action-3" href="./assets/404/index.html">
+                    <a class="fab-action fab-action-3" href="https://maps.app.goo.gl/7HCVHedWNiGRD57i7">
                         <i class="ai-location"></i>
                     </a>
                     <a class="fab-action fab-action-4" href="./assets/404/index.html">
@@ -151,8 +142,8 @@
             <h1 class="h1-main">Galeri</h1>
             <div class="gallery">
                 <img src="./assets/img/polosan.jpg" alt="Two hands creating a heart and showing the sun">
-                <img src="./assets/img/polosan.jpg" alt="The mountain">
-                <img src="./assets/img/polosan.jpg" alt="a river">
+                <img src="./assets/img/1st.jpg" alt="The mountain">
+                <img src="./assets/img/H.jpg" alt="a river">
                 <img src="./assets/img/polosan.jpg" alt="a women with a camera">
             </div>
         </div>
@@ -161,14 +152,13 @@
             <div class="center">
                 <div class="article-card">
                     <div class="content">
-                        <p class="date">Jan 1, 2022</p>
-                        <p class="title">Article Title Goes Here</p>
+                        <p class="date">5 maret 2025</p>
+                        <p class="title"><small>Acara</small> <b>Haul Akbar</b></p>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1482877346909-048fb6477632?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=958&q=80" alt="article-cover" />
+                    <img src="./assets/img/H.jpg" alt="Acara"/>
                 </div>
             </div>
         </div>
-        
     </main>
     <footer class="relative bg-dark pt-8 pb-6">
         <div class="container mx-auto px-4">
@@ -176,8 +166,8 @@
             <div class="w-full lg:w-6/12 px-4">
               <h4 class="text-3xl fonat-semibold text-light">Kontak</h4>
               <h5 class="text-lg mt-0 mb-2 text-light">
-                <p><i class="bi bi-envelope-at"></i><span>&nbsp;mohfaqihsyafaa@gmail.com</span></p>
-                <p><i class="bi bi-geo-alt"></i><span>&nbsp;Kp margahurip rt01 01, Ciheulang, Kec. Ciparay, Kabupaten Bandung, Jawa Barat 40381</span></p>
+                <p><i class="bi bi-envelope"></i><span>&nbsp;:mohfaqihsyafaa@gmail.com</span></p>
+                <p><i class="bi bi-geo-alt"></i><span>&nbsp;:Kp margahurip rt01 01, Ciheulang, Kec. Ciparay, Kabupaten Bandung, Jawa Barat 40381</span></p>
               </h5>
               <div class="mt-6 lg:mb-0 mb-6">
                 <button class="bg-dark text-danger shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
