@@ -257,7 +257,7 @@ body {
 
 #btn-back-to-top {
   position: fixed;
-  bottom: 7rem;
+  bottom: 10rem;
   right: 2rem;
   display: none;
   z-index: 5;
@@ -525,7 +525,60 @@ body {
   color: #fff;
 }
 
+.container-tentang {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10000;
+  background-color: black;
+  height: 60%;
+  width: 50%;
+  border-radius: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  display: none;
+}
 
+.container-tentang.expand {
+  display: block;
+}
+
+.tentang-toggle {
+  cursor: pointer;
+}
+
+.tentang-toggle::after,
+.tentang-toggle::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 2rem;
+  background-color: white;
+  right: 2rem;
+  top: 2.5rem;
+}
+
+.tentang-toggle::after {
+  bottom: 10%;
+  transform: rotate(45deg);
+}
+
+.tentang-toggle::before {
+  transform: rotate(-45deg);
+}
+
+.container-tentang h1 {
+  text-align: center;
+  color: #ffff;
+  padding: 2rem;
+}
+
+.container-tentang p {
+  padding: 0 3rem;
+  color: #ffff;
+}
+
+/*footer*/
 .site-footer {
   background-color: #26272b;
   padding: 45px 0 20px;

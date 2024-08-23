@@ -12,6 +12,16 @@ function goUrlV() {
     window.location.href = './assets/menu/visimisi/index.html'
 }
 
+const about = document.getElementById('tentang');
+about.addEventListener('click' , () => {
+    document.querySelector('.container-tentang').classList.add('expand')
+})
+
+const closeAbout = document.querySelector('.container-tentang > .tentang-toggle');
+closeAbout.addEventListener('click' , () => {
+    document.querySelector('.container-tentang').classList.remove('expand')
+})
+
 let mybutton = document.getElementById("btn-back-to-top");
 
 // When the user scrolls down 20px from the top of the document, show the button
