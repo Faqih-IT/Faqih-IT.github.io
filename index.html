@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Baitus Shofaa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="./assets/img/BSI.png" type="icons">
+</head>
+<body>
+    <!-- partial:index.partial.html -->
+    <nav class="container-nav">
+        <ul class="ul-nav">
+            <li class="li-nav">
+                <a href="/" class="a-nav">
+                    <i class='bx bx-home-alt-2'></i>
+                    <span>Beranda</span>
+                </a>
+            </li>
+            <li class="li-nav">
+                <a href="./assets/404/index.html" class="a-nav">
+                    <i class='bx bx-photo-album'></i>
+                    <span>Album Galeri</span>
+                </a>
+            </li>	
+            <li class="li-nav">
+                <a href="./assets/menu/pendaftaran/index.html" class="a-nav">
+                    <i class="bi bi-mortarboard"></i>
+                    <span>Pendaftaran</span>
+                </a>
+            </li>
+            <li class="li-nav">
+                <a href="./assets/404/index.html" class="a-nav">
+                    <i class="bi bi-trophy"></i>
+                    <span>Prestasi</span>
+                </a>
+            </li>	
+            <li class="li-nav">	
+                <a href="./assets/node/kontak/index.html" class="a-nav">
+                    <i class='bx bx-message'></i>
+                    <span>Kontak</span>
+                </a>
+            </li>
+            <li class="li-nav">
+                <a href="./assets/404/index.html" class="a-nav">
+                    <i class="ai-bell"></i>
+                    <span>Notifications</span>
+                </a>
+            </li>
+            <li class="li-nav">
+                <a href="./assets/404/index.html" class="a-nav">
+                    <i class='bx bx-user'></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="device">
+        <div class="container-mobile">
+            <button id="burger" class="open-main-nav">
+                <span class="burger"></span>
+                <span class="burger-text">Menu</span>
+            </button>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li>
+                        <a href="/">Beranda</a>
+                    </li>
+                    <li>
+                        <a href="./assets/404/index.html">Album Galeri</a>
+                    </li>
+                    <li>
+                        <a href="./assets/menu/pendaftaran/index.html">Pendaftaran</a>
+                    </li>
+                    <li>
+                        <a href="./assets/404/index.html">Prestasi</a>
+                    </li>
+                    <li>
+                        <a href="./assets/404/index.html" id="notifyButton">Notifikasi</a>
+                    </li>
+                    <li>
+                        <a href="./assets/node/kontak/index.html">Kontak</a>
+                    </li>
+                    <li>
+                        <a href="./assets/404/index.html">Profile</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main class="container-main">
+        <div class="container-logo">
+            <img src="./assets/img/BSI.png" alt="BSI">
+            <span><b>Baitus Shofaa</b></span>
+        </div>
+        <div class="container-card">
+            <div class="card">
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;"><strong>"SATU BAB ILMU</strong> YANG SESEORANG PELAJARI LEBIH BAIK DARI PADA<strong> DUNIA DAN SEISINYA"</strong></p>
+                <p class="card-footer">Abu hamid muhammad bin muhammad al-ghozali ath-thusi asy-syafi'i <br><b>(IMAM AL-GHOZALI)</b></p>
+            </div>
+        </div>
+        <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top" style="background-color: green;">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <div class="container-button">
+            <button style="--color:#1900ff;--slant:40px;--border:8px" onclick="goUrlP()">Pendaftaran</button>
+            <button onclick="goUrlV()">Visi & Misi</button>
+            <button style="--color:#ff0000;--border:2px;--slant:.5em" onclick="goUrlF()">Fasilitas</button>
+        </div>
+        <div class="container-quick-btn">
+            <div class="fab-wrapper">
+                <input id="fabCheckbox" type="checkbox" class="fab-checkbox" />
+                <label class="fab" for="fabCheckbox">
+                    <span class="fab-dots fab-dots-1"></span>
+                    <span class="fab-dots fab-dots-2"></span>
+                    <span class="fab-dots fab-dots-3"></span>
+                </label>
+                <div class="fab-wheel">
+                    <a class="fab-action fab-action-1" href="./assets/menu/bantuan/index.html">
+                        <i class="ai-question"></i>
+                    </a>
+                    <a class="fab-action fab-action-2" href="https://linktr.ee/Baitusshofaa">
+                        <i class="ai-link-chain"></i>
+                    </a>
+                    <a class="fab-action fab-action-3" href="https://maps.app.goo.gl/7HCVHedWNiGRD57i7">
+                        <i class="ai-location"></i>
+                    </a>
+                    <a class="fab-action fab-action-4" href="./assets/node/laporanBug/index.html">
+                        <i class="ai-bug"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-galeri-main">
+            <h1 class="h1-main">Galeri</h1>
+            <div class="gallery">
+                <img src="./assets/img/polosan.jpg" alt="Two hands creating a heart and showing the sun">
+                <img src="./assets/img/1st.jpg" alt="The mountain">
+                <img src="./assets/img/H.jpg" alt="a river">
+                <img src="./assets/img/polosan.jpg" alt="a women with a camera">
+            </div>
+        </div>
+        <div id="container-acara-main">
+            <h1 class="h1-main">Acara</h1>
+            <div class="center">
+                <div class="article-card">
+                    <div class="content">
+                        <p class="date">5 maret 2025</p>
+                        <p class="title"><small>Acara</small> <b>Haul Akbar</b></p>
+                    </div>
+                    <img src="./assets/img/H.jpg" alt="Acara"/>
+                </div>
+            </div>
+        </div>
+        <div class="container-quotes2" style="margin: 4rem 0;">
+            <blockquote class="blockquote text-center text-success">
+                <p>"<mark style="background-color: black; color: white; font-weight: bold; border-radius: 10px;">Pendidikan</mark> Adalah Senjata paling ampuh yang bisa anda gunakan untuk <mark style="background-color: black; color: white; font-weight: bold; border-radius: 10px;">Mengubah Dunia</mark>"</p>
+                <footer class="blockquote-footer">Nelson Mandela, <cite title="The Greek Way">Presiden Afrika Selatan 1994-1999</cite></footer>
+            </blockquote>
+        </div>
+    </main>
+    <div class="container-tentang">
+        <h1>Baitusshofaa</h1>
+        <p>Yayasan Pendidikan dan Dakwah Baitusshofaa melalui Lembaga- lembaga ; Pondok Pesantren, TKA/PAUDQU/DTA, Sekolah Menengah Pertama Islam Terpadu (SMP IT), Madrasah Aliyah (MA), Majelis Ta’lim, serta Lembaga bahasa arab. Merupakan wadah berlangsungnya pendidikan agama, pembinaan akhlak, pelestarian budaya Islam dan pengembangan masyarakat. Melalui lembaga-lembaga tersebut untuk berperan aktif dalam kelangsungan dan kemajuan tanah air, bangsa, dan agama sesuai amanat UUD 1945</p>
+        <div class="tentang-toggle"></div>
+    </div>
+    <footer class="relative bg-dark pt-8 pb-6">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap text-left lg:text-left">
+            <div class="w-full lg:w-6/12 px-4">
+              <h4 class="text-3xl fonat-semibold text-light">Kontak</h4>
+              <h5 class="text-lg mt-0 mb-2 text-light">
+                <p><i class="bi bi-envelope"></i><span>&nbsp;:mohfaqihsyafaa@gmail.com</span></p>
+                <p><i class="bi bi-geo-alt"></i><span>&nbsp;:Kp margahurip rt01 01, Ciheulang, Kec. Ciparay, Kabupaten Bandung, Jawa Barat 40381</span></p>
+              </h5>
+              <div class="mt-6 lg:mb-0 mb-6">
+                <button class="bg-dark text-danger shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                    <i class="fab fa-youtube"></i></button><button class="bg-dark text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                    <i class="fab fa-facebook"></i></button><button class="bg-dark text-pink-500 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                    <i class="fab fa-instagram"></i></button>
+              </div>
+            </div>
+            <div class="w-full lg:w-6/12 px-4">
+              <div class="flex flex-wrap items-top mb-6">
+                <div class="w-full lg:w-4/12 px-4 ml-auto">
+                  <span class="block uppercase text-light text-sm font-semibold mb-2">Links</span>
+                  <ul class="list-unstyled">
+                    <li style="color: white; font-weight: 500; text-decoration: underline; cursor: pointer; font-size: 14.5px; margin: 2px 0;" id="tentang">
+                      Tentang Kami
+                    </li>
+                    <li>
+                      <a class="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="./assets/menu/bantuan/index.html">Bantuan Kami</a>
+                    </li>
+                    <li>
+                      <a class="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="./assets/node/kontak/index.html">Kontak Kami</a>
+                    </li>
+                    <li>
+                      <a class="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://maps.app.goo.gl/7HCVHedWNiGRD57i7">Alamat Kami</a>
+                    </li>
+                    <li>
+                      <a class="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="mailto: mohfaqihsyafaa@gmail.com">Email Kami</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- <div class="w-full lg:w-4/12 px-4">
+                  <span class="block uppercase text-light text-sm font-semibold mb-2">Lainnya</span>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a class="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT License</a>
+                    </li>
+                    <li>
+                      <a class="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
+                    </li>
+                    <li>
+                      <a class="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a class="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
+                    </li>
+                  </ul>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <hr class="my-6 border-blueGray-300">
+          <div class="flex flex-wrap items-center md:justify-between justify-center">
+            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+              <div class="text-sm text-light font-semibold py-1">
+                &copy; <span id="get-current-year">2024 Baitus Shofaa. All rights reserved.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+<!-- partial -->
+    <script src='https://unpkg.com/akar-icons-fonts'></script>
+    <script  src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

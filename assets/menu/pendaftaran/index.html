@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pendaftaran</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./../../img/BSI.png" type="icons">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-nav">
+      <button onclick="goBack()">Kembali</button>
+    </div>
+    <p class="p-note">#Pendaftaran khusus Smp It dan MA ada di paling bawah</p>
+    <div class="container-body">
+      <section class="forms-section">
+        <h1 class="section-title">Pendaftaran</h1>
+        <div class="forms">
+          <div class="form-wrapper is-active">
+            <button type="button" class="switcher switcher-login">
+              Pesantren
+              <span class="underline"></span>
+            </button>
+            <form class="form form-login" method="post">
+              <fieldset>
+                <legend>
+                  Mohon untuk di isi data sesuai dengan data pribadi anak
+                </legend>
+                <div class="input-block">
+                  <label for="Nama Lengkap">Nama Lengkap</label>
+                  <input id="nama" name="namaLengkap" type="text" required />
+                </div>
+                <div class="input-block">
+                  <label for="Tempat Lahir">Tempat Lahir</label>
+                  <input
+                    id="tempatLahir"
+                    name="tempatLahir"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div class="input-block">
+                  <label for="Tanggal Lahir">Tanggal Lahir</label>
+                  <input
+                    id="jenisKelamin"
+                    name="tanggalLahir"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div class="input-block">
+                  <label for="Jenis Kelamain">Jenis Kelamin</label>
+                  <select id="gender" name="jenisKelamin" required>
+                    <option value="">Pilih Jenis Kelamin</option>
+                    <option value="male">Laki-Laki</option>
+                    <option value="female">Perempuan</option>
+                  </select>
+                </div>
+                <div class="input-block">
+                  <label for="Alamat">Alamat</label>
+                  <input id="alamat" type="text" name="alamat" required />
+                </div>
+                <div class="input-block">
+                  <label for="">no Tlp/WA</label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    pattern="[0-9]{10-15}"
+                    name="noTlp/WA"
+                  />
+                </div>
+              </fieldset>
+              <button type="submit" class="btn-login" style="cursor: pointer;">
+                <i class="bi bi-send"></i>&nbsp;Kirim
+              </button>
+            </form>
+          </div>
+          <div class="form-wrapper">
+            <button type="button" class="switcher switcher-signup">
+              Tk/PaudQu/Dta
+              <span class="underline"></span>
+            </button>
+            <form class="form form-signup">
+              <fieldset>
+                <legend>
+                  Mohon untuk di isi sesuai denagan data Pribadi anak
+                </legend>
+                <div class="input-block">
+                    <label for="Pendaftaran">Pendaftaran Untuk</label>
+                    <select id="pendaftaran" name="Pendaftaran" required>
+                      <option value="">Pilih Pendaftaran</option>
+                      <option value="male">Tk</option>
+                      <option value="female">PaudQu</option>
+                      <option value="female">Dta</option>
+                    </select>
+                  </div>
+                <div class="input-block">
+                  <label for="Nama Lengkap">Nama Lengkap</label>
+                  <input id="nama" name="namaLengkap" type="text" required />
+                </div>
+                <div class="input-block">
+                  <label for="Tempat Lahir">Tempat Lahir</label>
+                  <input
+                    id="tempatLahir"
+                    name="tempatLahir"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div class="input-block">
+                  <label for="Tanggal Lahir">Tanggal Lahir</label>
+                  <input
+                    id="jenisKelamin"
+                    name="tanggalLahir"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div class="input-block">
+                  <label for="Jenis Kelamain">Jenis Kelamin</label>
+                  <select id="gender" name="jenisKelamin" required>
+                    <option value="">Pilih Jenis Kelamin</option>
+                    <option value="male">Laki-Laki</option>
+                    <option value="female">Perempuan</option>
+                  </select>
+                </div>
+                <div class="input-block">
+                  <label for="Alamat">Alamat</label>
+                  <input id="alamat" type="text" name="alamat" required />
+                </div>
+                <div class="input-block">
+                  <label for="">no Tlp/WA</label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    pattern="[0-9]{10-15}"
+                    name="noTlp/WA"
+                  />
+                </div>
+              </fieldset>
+              <button type="submit" class="btn-signup" style="cursor: pointer;" >
+                <i class="bi bi-send"></i>&nbsp;Kirim
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="container-button-smp-ma">
+        <button class="button-arounder" onclick="goUrlSMP()">Smp It</button>
+        <button class="button-arounder" onclick="goUrlMA()">MA</button>
+    </div>
+    <!-- partial -->
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+
+      function goUrlSMP() {
+        window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScL728_ljhA73ER5jIoxvr3CjiN7rZqC7N60q2PVnwziOfREw/viewform?pli=1'
+      }
+
+      function goUrlMA() {
+        window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdOM-5vERTPARaSNn2V3fQXaWCNQpDbYEofdREzrki3wgimFg/viewform'
+      }
+
+      const switchers = [...document.querySelectorAll(".switcher")];
+
+      switchers.forEach((item) => {
+        item.addEventListener("click", function () {
+          switchers.forEach((item) =>
+            item.parentElement.classList.remove("is-active")
+          );
+          this.parentElement.classList.add("is-active");
+        });
+      });
+    </script>
+  </body>
+</html>
