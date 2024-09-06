@@ -697,17 +697,43 @@ body {
 .social-icons a.dribbble:hover {
   background-color: #ea4c89;
 }
+
 /*navbar mobile*/
 .devices {
   position: relative;
 }
 
+.container-logo-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3vh;
+}
+
+.container-logo-mobile img {
+  height: 50px;
+  width: 40px;
+}
+
+.container-logo-mobile span {
+  font-family: "Grey Qo", cursive;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 30px;
+}
+
 .container-mobile {
   display: none;
+  background-color: #fff;
+  height: 5rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }
 
 .main-nav {
-  position: absolute;
+  position:absolute;
   top: 0;
   right: 0;
   left: 0;
@@ -728,7 +754,7 @@ body {
 
 /* Yellow band effect */
 .main-nav::before {
- content: '';
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;
@@ -736,6 +762,7 @@ body {
   right: -15px;
   background: #008c04;
   width: 100%;
+  height: 100vh;
   transform-origin: 0 0;
   transform: skew(-14deg) translateX(-120%);
   transition: all .275s .1s;
@@ -750,6 +777,7 @@ body {
   display: inline-flex;
   flex-direction: column;
   height: 93%; /* Should be 100%, but we have a notice message :D */
+  margin-top: 18rem;
   align-items: flex-end;
   justify-content: center;
   transform: translateX(-18%) skew(-16deg);
@@ -819,7 +847,6 @@ cursor: pointer;
 outline: none;
 }
 .burger {
-position: relative;
 display: block;
 width: 28px;
 height: 4px;
@@ -915,6 +942,9 @@ text-decoration: none;
   .container-mobile {
     display: block;
   }
+  .container-logo {
+    display: none;
+  }
   .container-button {
     display: flex;
     flex-direction: column;
@@ -949,6 +979,9 @@ text-decoration: none;
   }
   .container-mobile {
     display: block;
+  }
+  .container-logo {
+    display: none;
   }
   .container-galeri-main {
     margin: 5rem 0 0 0;
@@ -988,6 +1021,9 @@ text-decoration: none;
   .container-mobile {
     display: block;
   }
+  .container-logo {
+    display: none;
+  }
   .container-button {
     display: flex;
     flex-direction: column;
@@ -1014,6 +1050,9 @@ text-decoration: none;
   .container-mobile {
     display: block;
   }
+  .container-logo {
+    display: none;
+  }
   .container-button {
     display: flex;
     flex-direction: column;
@@ -1028,6 +1067,12 @@ text-decoration: none;
     display: block;
   }
   .container-mobile {
+    display: none;
+  }
+  .container-logo {
+    display: flex;
+  }
+  .trans-mobile {
     display: none;
   }
 }
